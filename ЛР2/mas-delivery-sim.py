@@ -11,11 +11,6 @@ import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
 
-
-# =====================================================================
-# 1. МОДЕЛИ ДАННЫХ, СОСТОЯНИЙ И СООБЩЕНИЙ (Спецификация из ЛР №1)
-# =====================================================================
-
 class RoverState(Enum):
     IDLE = "СВОБОДЕН"
     TO_RESTAURANT = "К РЕСТОРАНУ"
@@ -119,11 +114,6 @@ class RoverAgent:
         bid_cost = eta + battery_penalty
         return bid_cost, eta
 
-
-# =====================================================================
-# 2. ЯВНАЯ РЕАЛИЗАЦИЯ ВЕНГЕРСКОГО АЛГОРИТМА (МЕТОД КУНА)
-# =====================================================================
-
 def hungarian_algorithm(cost_matrix: List[List[float]]) -> List[Tuple[int, int]]:
     """
     Классический Венгерский алгоритм (O(N^3)) для решения задачи о назначениях.
@@ -187,11 +177,6 @@ def hungarian_algorithm(cost_matrix: List[List[float]]) -> List[Tuple[int, int]]
         if p[j] > 0:
             assignments.append((p[j] - 1, j - 1))
     return assignments
-
-
-# =====================================================================
-# 3. ЯДРО СИМУЛЯЦИИ МАС
-# =====================================================================
 
 class DeliverySimulation:
     def __init__(
@@ -278,9 +263,6 @@ class DeliverySimulation:
         dist = math.hypot(pos[0] - best_s.pos[0], pos[1] - best_s.pos[1])
         return best_s, dist
 
-    # -----------------------------------------------------------------
-    # МЕХАНИЗМ 1: ЦЕНТРАЛИЗОВАННЫЙ ДИСПЕТЧЕР (ВЕНГЕРСКИЙ АЛГОРИТМ)
-    # -----------------------------------------------------------------
     def distribute_centralized_hungarian(self):
         if not self.pending_orders:
             return
@@ -339,9 +321,6 @@ class DeliverySimulation:
             o for o in self.pending_orders if o.order_id not in assigned_order_ids
         ]
 
-    # -----------------------------------------------------------------
-    # МЕХАНИЗМ 2: ДЕЦЕНТРАЛИЗОВАННЫЙ ТЕНДЕР (CONTRACT NET PROTOCOL)
-    # -----------------------------------------------------------------
     def distribute_contract_net(self):
         if not self.pending_orders:
             return
@@ -409,9 +388,6 @@ class DeliverySimulation:
 
         self.pending_orders = remaining_orders
 
-    # -----------------------------------------------------------------
-    # ФИЗИКА ДВИЖЕНИЯ И КООРДИНАЦИЯ ЗАРЯДКИ
-    # -----------------------------------------------------------------
     def _move_towards(self, rover: RoverAgent, target: Tuple[float, float], load_weight: float = 0.0) -> bool:
         dist = rover.distance_to(target)
         if dist <= rover.speed:
@@ -530,11 +506,6 @@ class DeliverySimulation:
             "Суммарный расход энергии": round(total_energy, 1),
             "Разрядившихся роботов": dead_rovers,
         }
-
-
-# =====================================================================
-# 4. ВЕБ-ИНТЕРФЕЙС ДЕМОНСТРАЦИИ И СРАВНИТЕЛЬНЫХ ЭКСПЕРИМЕНТОВ
-# =====================================================================
 
 st.set_page_config(page_title="МАС Доставка — ЛР №2", layout="wide")
 st.title("Лабораторная работа №2: Исследование механизмов распределения задач в МАС")
