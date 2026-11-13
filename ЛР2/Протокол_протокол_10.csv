@@ -1,0 +1,16 @@
+﻿Шаг,Тип,Отправитель,Получатель,Данные
+150,REFUSE,Rover_3,OrderBroker,{'order_id': 68}
+150,CFP,OrderBroker,Rover_4,{'order_id': 68}
+150,REFUSE,Rover_4,OrderBroker,{'order_id': 68}
+150,CFP,OrderBroker,Rover_5,{'order_id': 68}
+150,REFUSE,Rover_5,OrderBroker,{'order_id': 68}
+150,CFP,OrderBroker,Rover_6,{'order_id': 68}
+150,REFUSE,Rover_6,OrderBroker,{'order_id': 68}
+150,CFP,OrderBroker,Rover_7,{'order_id': 68}
+150,REFUSE,Rover_7,OrderBroker,{'order_id': 68}
+150,CFP,OrderBroker,Rover_8,{'order_id': 68}
+150,REFUSE,Rover_8,OrderBroker,{'order_id': 68}
+150,CFP,OrderBroker,Rover_9,{'order_id': 68}
+150,REFUSE,Rover_9,OrderBroker,{'order_id': 68}
+150,REQUEST_SLOT,Rover_7,Station_2,{'battery': 20.4}
+150,REQUEST_SLOT,Rover_9,Station_2,{'battery': 13.0}

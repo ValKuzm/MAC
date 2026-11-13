@@ -1,0 +1,16 @@
+﻿Шаг,Тип,Отправитель,Получатель,Данные
+148,DIRECT_ASSIGN,Rover_4,CentralDispatcher,{'telemetry': 48.32840119655751}
+148,DIRECT_ASSIGN,Rover_6,CentralDispatcher,{'telemetry': 47.6902492058311}
+148,DIRECT_ASSIGN,Rover_8,CentralDispatcher,{'telemetry': 50.91805833742312}
+149,DIRECT_ASSIGN,Rover_1,CentralDispatcher,{'telemetry': 49.80627508881279}
+149,DIRECT_ASSIGN,Rover_2,CentralDispatcher,{'telemetry': 44.87907021058265}
+149,DIRECT_ASSIGN,Rover_3,CentralDispatcher,{'telemetry': 35.29443667449644}
+149,DIRECT_ASSIGN,Rover_4,CentralDispatcher,{'telemetry': 48.24840119655751}
+149,DIRECT_ASSIGN,Rover_6,CentralDispatcher,{'telemetry': 47.6102492058311}
+149,DIRECT_ASSIGN,Rover_8,CentralDispatcher,{'telemetry': 50.83805833742312}
+150,DIRECT_ASSIGN,Rover_1,CentralDispatcher,{'telemetry': 49.72627508881279}
+150,DIRECT_ASSIGN,Rover_2,CentralDispatcher,{'telemetry': 44.79907021058265}
+150,DIRECT_ASSIGN,Rover_3,CentralDispatcher,{'telemetry': 35.21443667449644}
+150,DIRECT_ASSIGN,Rover_4,CentralDispatcher,{'telemetry': 48.16840119655751}
+150,DIRECT_ASSIGN,Rover_6,CentralDispatcher,{'telemetry': 47.530249205831105}
+150,DIRECT_ASSIGN,Rover_8,CentralDispatcher,{'telemetry': 50.75805833742312}
